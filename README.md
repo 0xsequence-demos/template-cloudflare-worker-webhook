@@ -3,12 +3,11 @@ a simplified [Cloudflare Worker](cloudflare.com) that creates a secret uuid endp
 
 ## how to
 1. clone down repo
-2. `$ cd cool-block-fcf3`
-3. `$ pnpm install`
-4. `$ node src/generateWebhookUuid.js` and copy the printed uuid
-5. `$ mv wrangler.example.toml wrangler.toml` and complete the `WEBHOOK_UUID=` with the copied uuid from step 3
-6. `$ npx wrangler deploy`
-7. copy the endpoint that gets printed to terminal with the uuid as `https://<cloudflare_worker_endpoint>/<uuid>`, then register it with this [example webhook code](https://docs.sequence.xyz/api/indexer/examples/webhook-listener) 
+2. `$ pnpm install`
+3. `$ node src/generateWebhookUuid.js` and copy the printed uuid
+4. `$ mv wrangler.example.toml wrangler.toml` and complete the `WEBHOOK_UUID=` with the copied uuid from step 3
+5. `$ npx wrangler deploy`
+6. copy the endpoint that gets printed to terminal with the uuid as `https://<cloudflare_worker_endpoint>/<uuid>`, then register it with this [example webhook code](https://docs.sequence.xyz/api/indexer/examples/webhook-listener) 
 
 ## return responses from Sequence Webhook Service
 * Response: POST /<your_endpoint_id>
