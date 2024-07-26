@@ -10,8 +10,8 @@ export default {
 		if(env.WEBHOOK_UUID == slug){
 			const rawData = await request.arrayBuffer();
 			const rawText = new TextDecoder("utf-8").decode(rawData);
-			console.log('test')
-			// console.log(`transferring tokenID: ${JSON.parse(rawText)[0].log.transferEvent.tokenIds[0]}`)
+
+			console.log(`transferring tokenID: ${JSON.parse(rawText)[0].log.transferEvent.tokenIds[0]}`)
 	
 			return new Response(`true`, { status: 200 });
 		} else {
